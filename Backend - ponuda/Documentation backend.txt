@@ -1,0 +1,95 @@
+Backend routes and database models 
+
+//USER
+-MODEL:   name, email, password, phone, surname, address, city, role:[user (Default), admin]
+
+-ROUTES:
+    Backend receive data: {
+        name, email, password, phone, surname, address, city }
+        (keep data named like this)
+
+    METHODS
+    -get 'backend_link/user - return all users
+    -get 'backend_link/user/:id' - return user with specific id
+    -post 'backend_link/user' - create new user
+    -put 'backend_link/user/:id' - update user with specific id
+    -delete 'backend_link/user/:id' - delete user with specific id
+
+    
+//COMPANY
+-MODEL: 
+    name,
+    id_number,
+    pdv_number,
+    address,
+    city,
+    owner,
+    phone,
+    email,
+    users,
+    date_of_establishment,
+    services,
+    website,
+    password,
+    premium,
+    photos_of_works,
+    logo
+
+-ROUTES:
+    Backend receive data : {
+         name,
+    id_number,
+    pdv_number,
+    address,
+    city,
+    owner,
+    phone,
+    email,
+    users,
+    date_of_establishment,
+    services,
+    website,
+    password,
+    premium,
+    photos_of_works (!!!MUST BE ARRAY NAMED SAME),
+    logo (!!!MUST BE ONE IMAGE NAMED SAME)
+    }
+
+    METHODS:
+        -get 'backend_link/company' - return all companies populated with owner data, services, and users data
+        -get 'backend_link/company/:id' - return company with specific id with owner data, services, users data
+        -post 'backend_link/company' - create company
+        -put 'backend_link/company/:id' - update company with specific id 
+        -delete 'backend_link/company/photo_of_works' - receive  {companyId, photoUrl} like form data and delete one clicked image 
+        -delete 'backend_link/company/:id' - delete company with specific id 
+
+
+//REQUEST 
+
+-MODEL: id_sender, budget, description, image, city, date_of_start, service_type, additional_info, contact_time
+
+-ROUTES:
+    Backend receive data: 
+     {id_sender, budget, description, image, city, date_of_start, service_type, additional_info, contact_time}
+
+    METHODS:
+        -get 'backend_link/request' - return all requests - populated sender data
+        -get 'backend_link/request/:id' - return request with specific id - populated sender data
+        -get 'backend_link/request/myrequestes/:id' - return all requests to logged in user with specific id
+        -post 'backend_link/request' - create new request [!!! RECEIVE ARRAY OF IMAGES NAMED 'IMAGE' MUST BE ARRAY IF THERE IS IMAGES OF REQUESTED JOB]
+        -put 'backend_link/request/:id' - update request with specific id [!!! RECEIVE ARRAY OF IMAGES NAMED 'IMAGE' MUST BE ARRAY IF THERE IS IMAGES OF REQUESTED JOB]
+        -delete 'backend_link/request/:id' - delete request with specific id
+
+//OFFERS
+-MODEL :  id_request, id_sender, description, price, date_of_start
+
+-ROUTES:
+    Backend receive data:  id_request, id_sender, description, price, date_of_start
+
+    METHODS:
+        -get 'backend_link/offer' - return all offers with populated request data which are populated with request sender and offer populated with offer sender data read company 
+        -get 'backend_link/offer/:id' - return offer with specific id with all populated data like all offers
+        -get 'backend_link/offer/myoffers/:id' - return all offer to logged in company with specific id
+        -post 'backend_link/offer' - create new offer
+        -put 'backend_link/offer/:id' - update offer with specific id
+        -delete 'backend_link/offer/:id' - delete offer with specific id
