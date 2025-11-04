@@ -1,0 +1,41 @@
+NODE.JS / EXPRESS.JS / MONGODB	
+
+- Kreirati server za usluge ponudi.ba
+- Kreirati modele za USER, COMPANY, OFFER, REQUEST, REVIEW, CHAT, NOTIFICATIONS, SERVICES
+- Kreirati sve rute za CRUD operacije nad svim modelima
+- Kreirati login formu
+- Kreirati registraciju
+- Dodati JWT autorizaciju
+- Obezbjediti sigurnost bcrypt 
+- Omogućiti upload slika - nastaviti na svoj cloudinary
+- Kreirati middleware za ogranicenje pristupa podacima
+- Kreirati ADMIN-A
+- Kreirati upite za admina o svim podacima 
+
+USER (name, surname, adress, city, role, phone, email, password)
+
+COMPANY (name, id_number, pdv_number, adress, city, owner(USER REF? or just string), phone, email,
+ photos_of_works[], logo, date_of_establishment, services[service ref], website, premium, password?)
+
+REQUEST (id_sender?(USER_DATA), budget, description, image, city,
+ status(def open), date_of_start, service_type, additional_info?(squares, cleaning, something else), contact_time )
+
+OFFER (id_request, id_sender, description, price, date_of_start, status(def pending) )
+
+REVIEW (id_user, id_company, rating (1-5), description)
+
+CHAT (id_sender, id_receiver, message, seen)
+
+NOTIFICATIONS (id_receiver, type_of_not, message, seen)
+
+SERVICES (name, category)
+ 
+
+
+
+
+
+
+
+
+
