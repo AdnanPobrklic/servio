@@ -3,6 +3,11 @@ import mainBg from "../images/main-bg.png";
 import StepOneIcon from "../images/Group 57.svg";
 import StepTwoIcon from "../images/Group 58.svg";
 import StepThreeIcon from "../images/Group 65.svg";
+import ConnectFirmBg from "../images/connect-firm-bg.svg";
+import CoverageGroupBg from "../images/coverage-group-bg.svg";
+import AppStoreIcon from "../images/AppStore.svg";
+import GooglePlayIcon from "../images/GooglePlay.svg";
+import Group76 from "../images/Group 76.svg";
 
 function Home() {
     return (
@@ -45,7 +50,6 @@ function Home() {
                 ></div>
             </main>
 
-            {/* SEKCIJA "ZAŠTO BAŠ SERVIO?" */}
             <section className="text-center bg-light-blue-darker text-light-blue-green-darker font-[900] py-20">
                 <h2 className="text-4xl">Zašto baš Servio?</h2>
                 <p className="text-xl mx-[350px] mt-10 leading-10">
@@ -57,7 +61,6 @@ function Home() {
                 </p>
             </section>
 
-            {/* NOVA SEKCIJA "KAKO KORISTITI SERVIO" */}
             <section className="py-20 px-30 bg-white">
                 <h2 className="text-4xl font-[900] text-center text-light-blue-green mb-16">
                     Kako koristiti Servio
@@ -121,6 +124,92 @@ function Home() {
                     ))}
                 </div>
             </section>
+
+            <section
+                className="min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center py-20"
+                style={{ backgroundImage: `url(${ConnectFirmBg})` }}
+            >
+                <div className="text-center bg-white/90 backdrop-blur-sm rounded-3xl p-12 max-w-4xl mx-10 shadow-2xl">
+                    <h2 className="text-5xl font-[900] text-light-blue-green mb-16 leading-15">
+                        Imate uslugu koju želite približiti klijentima?
+                    </h2>
+                    <p className="text-2xl text-gray-700 mb-16 leading-relaxed">
+                        Registrujte se na Servio, povežite firmu i počnite
+                        nuditi usluge!
+                    </p>
+                    <button className="bg-light-blue text-white text-xl font-bold py-4 px-12 rounded-full hover:bg-light-blue-darker transition-colors shadow-lg">
+                        Poveži firmu
+                    </button>
+                </div>
+            </section>
+
+            <section
+                className="min-h-screen bg-contain bg-center bg-no-repeat flex items-center justify-center py-20 bg-light-blue relative"
+                style={{
+                    backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(${CoverageGroupBg})`,
+                }}
+            >
+                <div className="relative z-10 flex flex-col text-center gap-20 text-white">
+                    <h2 className="text-5xl font-[900]">
+                        Tražite provjerenu uslugu u svom gradu?
+                    </h2>
+                    <div className="text-2xl font-[600] flex flex-col gap-2">
+                        <p>Djelujemo u svim gradovima Bosne i Hercegovine</p>
+                        <p>naša mreža pokriva cijelu zemlju.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section className="min-h-screen flex items-center justify-center gap-[350px]">
+                <div className="">
+                    <div className="text-5xl font-bold  mb-8 flex flex-col gap-5 text-light-blue-green font-[900]">
+                        <h2>Sve usluge na dohvat ruke</h2>
+                        <h2>preuzmi aplikaciju i uštedi vrijeme.</h2>
+                    </div>
+                    <div className="flex gap-10 justify-start">
+                        <img
+                            src={AppStoreIcon}
+                            alt="Servio App store"
+                            className="h-12"
+                        />
+                        <img
+                            src={GooglePlayIcon}
+                            alt="Servio Google store"
+                            className="h-12"
+                        />
+                    </div>
+                </div>
+                <img
+                    src={Group76}
+                    alt="Servio Mobile App"
+                    className="h-[1000px] self-end"
+                />
+            </section>
+            <footer className="w-full bg-light-blue flex flex-col gap-10 pt-20 pl-10 text-light-blue-green-darker">
+                <div className="flex gap-20">
+                    <ul className="flex flex-col gap-1">
+                        <li className="font-[900]">Informacije i Kontakt</li>
+                        <li>Zašto koristiti Servio</li>
+                        <li>Kako koristiti Servio</li>
+                        <li>
+                            <a href="tel:+38761233575">
+                                <i class="fa-solid fa-phone-volume"></i>
+                                <span>+38761233575</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul className="flex flex-col gap-1">
+                        <li className="font-[900]">Nudite usluge?</li>
+                        <li>Povežite firmu</li>
+                        <li>Postanite partner</li>
+                    </ul>
+                    <i className="fa-brands fa-google-play text-3xl"></i>
+                    <i className="fa-brands fa-app-store text-3xl"></i>
+                </div>
+                <span className="pb-2">
+                    Copyright ©2025 Servio d.o.o. Sva prava zadržana.
+                </span>
+            </footer>
         </div>
     );
 }
