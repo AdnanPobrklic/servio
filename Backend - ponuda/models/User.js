@@ -7,7 +7,7 @@ const userSchema = new Schema({
     surname: {type: String, },
     address: {type: String, },
     city: {type: String, },
-    phone: {type: String, unique: true},
+    phone: {type: String, },
     email: {type: String, unique: true},
     password: {type: String, required: true},
     role: {type: String, enum: ['user', 'admin'], default: 'user'},
