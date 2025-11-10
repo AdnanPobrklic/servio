@@ -28,7 +28,7 @@ const getUserById = async (req, res) => {
 const createUser = async (req, res) => {
     const {name, email, password, phone, surname, address, city} = req.body;
 
-    if(!name || !email || !password || !phone || !surname || !address || !city) {
+    if( !password ) {
         return res.status(400).send('All fields are required');
     }
 
