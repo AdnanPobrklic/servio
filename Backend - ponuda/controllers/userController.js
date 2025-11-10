@@ -32,9 +32,9 @@ const createUser = async (req, res) => {
         return res.status(400).send('All fields are required');
     }
 
-    const userExists = await User.find({ $or: [ { email }, { phone } ] });
+    const userExists = await User.find({ $or: [ { email } ] });
     if(userExists.length > 0) {
-        return res.status(400).send('User with this email or phone already exists');
+        return res.status(400).send('User with this email already exists');
     }
 
     const user = new User({
