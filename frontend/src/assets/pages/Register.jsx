@@ -1,4 +1,5 @@
 import RegLoginBg from "../images/reg_login_bg.svg";
+import { Link } from "react-router-dom";
 
 function Register() {
     return (
@@ -7,11 +8,14 @@ function Register() {
             style={{ backgroundImage: `url(${RegLoginBg})` }}
         >
             <div className="w-full max-w-[700px] bg-white rounded-3xl shadow-2xl p-8 lg:p-12">
-                <h1 className="text-4xl font-black text-light-blue-green text-center mb-8">
+                <Link
+                    to="/"
+                    className="text-4xl lg:text-6xl font-black text-light-blue-green text-center w-full block"
+                >
                     Servio
-                </h1>
+                </Link>
 
-                <div className="space-y-6">
+                <div className="space-y-6 mt-8">
                     <h2 className="text-2xl font-black text-gray-900 text-center mb-6">
                         Registruj se
                     </h2>
@@ -50,9 +54,12 @@ function Register() {
 
                     <div className="text-center">
                         <span className="text-gray-600">Imate profil? </span>
-                        <button className="text-light-blue font-bold hover:underline">
+                        <Link
+                            to="/prijava"
+                            className="text-light-blue font-bold hover:underline"
+                        >
                             Prijavi se
-                        </button>
+                        </Link>
                     </div>
 
                     <div className="text-center">
