@@ -9,6 +9,8 @@ import AppStoreIcon from "../images/AppStore.svg";
 import GooglePlayIcon from "../images/GooglePlay.svg";
 import Group76 from "../images/Group 76.svg";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
+
 function Home() {
     return (
         <div className="min-h-dvh flex flex-col font-archivo select-none">
@@ -138,9 +140,12 @@ function Home() {
                         Registrujte se na Servio, povežite firmu i počnite
                         nuditi usluge!
                     </p>
-                    <button className="bg-light-blue text-white text-lg lg:text-xl font-bold py-3 lg:py-4 px-8 lg:px-12 rounded-full hover:bg-light-blue-darker transition-colors shadow-lg">
+                    <Link
+                        to="/registracija-firme"
+                        className="bg-light-blue text-white text-lg lg:text-xl font-bold py-3 lg:py-4 px-8 lg:px-12 rounded-full hover:bg-light-blue-darker transition-colors shadow-lg"
+                    >
                         Poveži firmu
-                    </button>
+                    </Link>
                 </div>
             </section>
 

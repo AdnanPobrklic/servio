@@ -12,7 +12,9 @@ function NavBar() {
                 <li className="flex items-center gap-1 cursor-pointer">
                     Usluge <i className="fa-solid fa-caret-down"></i>
                 </li>
-                <li className="cursor-pointer">Poveži firmu</li>
+                <Link to="/registracija-firme" className="cursor-pointer">
+                    Poveži firmu
+                </Link>
                 <Link
                     to="/prijava"
                     className="bg-light-blue text-white px-5 py-2 rounded-full border-none"
@@ -38,9 +40,12 @@ function NavBar() {
                         <li className="flex items-center gap-1 cursor-pointer text-2xl list-none">
                             Usluge <i className="fa-solid fa-caret-down"></i>
                         </li>
-                        <li className="cursor-pointer text-2xl list-none">
+                        <Link
+                            to="/registracija-firme"
+                            className="cursor-pointer text-2xl list-none"
+                        >
                             Poveži firmu
-                        </li>
+                        </Link>
                         <Link
                             to="/prijava"
                             className="bg-light-blue text-white px-10 py-4 rounded-full border-none text-xl mt-4"
