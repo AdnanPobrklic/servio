@@ -143,9 +143,9 @@ function RegisterCompany() {
             ></div>
 
             <div className="w-full lg:w-[40%] bg-transparent lg:bg-white flex flex-col relative z-10 shrink-0">
-                <div className="flex-1 flex flex-col justify-center items-center lg:items-end pr-0 lg:pr-[60px] xl:pr-[80px]">
+                <div className="flex-1 flex flex-col justify-start mt-10 lg:mt-0 lg:justify-center items-center lg:items-end pr-0 lg:pr-[60px] xl:pr-[80px]">
                     {/* Form Card - Veći na svim ekranima osim mobile */}
-                    <div className="bg-white rounded-[30px] shadow-2xl p-8 lg:p-12 lg:min-w-[500px] w-[95%] sm:w-[90%] max-w-[600px] lg:max-w-[700px] lg:mr-[-150px] xl:mr-[-200px] relative z-20 mt-20 lg:mt-0 min-h-[600px] sm:min-h-[650px] flex flex-col justify-center">
+                    <div className="bg-white rounded-[30px] shadow-2xl p-8 lg:p-12 lg:min-w-[500px] w-[95%] sm:w-[90%] max-w-[600px] lg:max-w-[700px] lg:mr-[-150px] xl:mr-[-200px] relative z-20 min-h-[600px] sm:min-h-[650px] flex flex-col justify-center">
                         {step === 1 && (
                             <>
                                 <h1 className="text-3xl lg:text-4xl xl:text-5xl font-black text-light-blue-green mb-10">
